@@ -27,11 +27,11 @@
 */
 
 exports.settings = {
-    username: "admin",
-    password: "kissa2",
+    username: process.env.AIRFIELD_USERNAME,
+    password: process.env.AIRFIELD_PASSWORD,
     port: 3000,
-    cookieSecret: "thisissecret",
-    sessionSecret: "secretisthistoo",
+    cookieSecret: "thisissecret!$^&",
+    sessionSecret: "secretisthistoo^SSK@",
     enable_openstack: false,
     os_api_username: "admin",
     os_api_password: "goodopenstackpassword",

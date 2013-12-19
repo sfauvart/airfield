@@ -13,7 +13,7 @@ var express = require('express')
 
 var async = require('async');
 var redis = require('redis');
-var db = redis.createClient(process.env.REDIS_PORT || settings.REDIS_PORT, process.env.REDIS_HOST || settings.REDIS_HOST);
+var db = redis.createClient(process.env.REDIS_PORT_6379_TCP_PORT || settings.REDIS_PORT, process.env.REDIS_PORT_6379_TCP_ADDR || settings.REDIS_HOST);
 
 var request = require('request');
 

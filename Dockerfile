@@ -1,5 +1,9 @@
-from ubuntu:12.04
-maintainer Nick Stinemates
+# Airfield app
+
+# set REDIS_HOST and REDIS_PORT to your local settings
+
+FROM ubuntu:12.04
+MAINTAINER Nick Stinemates, Thatcher Peskens
 
 run apt-get -y update
 run apt-get install -y wget 
