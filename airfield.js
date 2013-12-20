@@ -67,7 +67,7 @@ app.get('/login', function(req, res){
 
 app.post('/login', function(req, res){
 	var post = req.body;
-	if(post.user == settings.username && post.password == settings.password){
+	if(post.user == process.env.AIRFIELD_USER && post.password == process.env.AIRFIELD_PASS){
 		res.redirect('/routes');
 	}else{
 		res.send("Your login credientials are invalid!");

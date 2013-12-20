@@ -27,8 +27,8 @@
 */
 
 exports.settings = {
-    username: process.env.AIRFIELD_USERNAME,
-    password: process.env.AIRFIELD_PASSWORD,
+    username: "set AIRFIELD_USER in your env",
+    password: "set AIRFIELD_PASS in your env",
     port: 3000,
     cookieSecret: "thisissecret!$^&",
     sessionSecret: "secretisthistoo^SSK@",
