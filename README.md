@@ -1,10 +1,22 @@
 # Airfield
 Simple [hipache](https://github.com/dotcloud/hipache) web-interface
 
-Check packages from package.json
-Requires ofcourse hipache and redis installed for same server with airfield
+## Usage with Docker
 
-## Setup
+- Start hipache container, this comes with redis built into the same container
+
+```docker run -name hipache -d hipache```
+
+- Start airfield, linked to the just started hipache container, linked as 'redis', and set username and password
+
+```docker run --link hipache:redis -e AIRFIELD_USER=username -e AIRFIELD_PASS=password -P 3000:3000 -d dhrp/airfield```
+
+- now go to your host ip, port 3000 and you can login with the username and password you've set in the environment
+variables
+
+
+## Normal / manual installation
+
 *After downloading source:*
 
 	cd airfield
@@ -13,12 +25,10 @@ Requires ofcourse hipache and redis installed for same server with airfield
 
 Then you can go to [http://server.com:3000/](http://server.com:3000/)
 
-Default login credientials are:
+## Login
 
-	User: admin
-	Pass: kissa2
+Login credentials are set with AIRFIELD_USER and AIRFIELD_PASS environment variables.
 
-You can change those modifying **settings.js**-file
 
 ## Openstack support
 

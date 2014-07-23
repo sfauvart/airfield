@@ -1,6 +1,6 @@
 {
   "name": "Airfield",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node airfield"
@@ -10,7 +10,7 @@
     "swig": "0.14.0",
     "consolidate": "*",
     "redis": "*",
-    "connect-redis": "*",
+    "connect-redis": "1.4.7",
     "async": "*",
     "request": "*"
   }
